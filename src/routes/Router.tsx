@@ -10,14 +10,16 @@ const Router = () => {
   return (
     <BrowserRouter>
       <NavBar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/rankings' element={<Rankings />} />
-        <Route path='/division/:divisionId' element={<Division />} />
-        <Route path='/fighters' element={<Fighters />} />
-        <Route path='/fighter/:fighterId' element={<Fighter />} />
-        <Route path='*' element={<Page404 />} />
-      </Routes>
+      <main className='pt-16 min-h-screen max-w-7xl mx-auto px-4'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/rankings' element={<Rankings />} />
+          <Route path='/division/:divisionId' element={<Division />} />
+          <Route path='/fighters' element={<Fighters />} />
+          <Route path='/fighter/:fighterId' element={<Fighter />} />
+          <Route path='*' element={<Page404 />} />
+        </Routes>
+      </main>
     </BrowserRouter>
   );
 };
