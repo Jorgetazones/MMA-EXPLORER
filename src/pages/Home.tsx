@@ -8,9 +8,7 @@ const Home = () => {
   if (error) return <div>Error: {error}</div>;
   return (
     <div>
-      <h1>MMA Explorer</h1>
-
-      <div className='grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8'>
+      <div className='grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8 pt-16'>
         {data.map((category) => (
           <ChampionCard
             key={category.id}
