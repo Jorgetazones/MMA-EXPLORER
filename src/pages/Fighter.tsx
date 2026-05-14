@@ -10,9 +10,8 @@ const Fighter = () => {
   if (error) return <div>Error: {error}</div>;
   if (!data) return <Page404 />;
   return (
-    <div className='max-w-7xl mx-auto px-4 pt-24 flex flex-col md:flex-row gap-8'>
+    <div className='flex flex-col md:flex-row gap-8 pb-8'>
       <div className='md:w-1/3 md:sticky md:top-24 self-start'>
-        {' '}
         <img
           className='w-full rounded-xl object-cover object-top h-125 md:h-150'
           src={data.imgUrl}
@@ -22,12 +21,12 @@ const Fighter = () => {
       <div className='md:w-2/3 flex flex-col gap-6 py-4'>
         {/* Header */}
         <div>
-          <p className='text-red-500 text-sm uppercase tracking-widest mb-1'>
+          <p className='text-red-600 text-sm uppercase tracking-widest mb-1'>
             {data.category}
           </p>
-          <h1 className='text-4xl font-extrabold text-white'>{data.name}</h1>
+          <h1 className='text-4xl font-extrabold text-gray-900'>{data.name}</h1>
           {data.nickname && (
-            <p className='text-gray-400 text-lg italic mt-1'>
+            <p className='text-gray-500 text-lg italic mt-1'>
               "{data.nickname}"
             </p>
           )}
@@ -36,20 +35,20 @@ const Fighter = () => {
         {/* Record */}
         <div className='flex gap-6'>
           <div className='text-center'>
-            <p className='text-3xl font-bold text-green-400'>{data.wins}</p>
-            <p className='text-xs text-gray-400 uppercase tracking-wider'>
+            <p className='text-3xl font-bold text-green-600'>{data.wins}</p>
+            <p className='text-xs text-gray-500 uppercase tracking-wider'>
               Wins
             </p>
           </div>
           <div className='text-center'>
-            <p className='text-3xl font-bold text-red-400'>{data.losses}</p>
-            <p className='text-xs text-gray-400 uppercase tracking-wider'>
+            <p className='text-3xl font-bold text-red-600'>{data.losses}</p>
+            <p className='text-xs text-gray-500 uppercase tracking-wider'>
               Losses
             </p>
           </div>
           <div className='text-center'>
-            <p className='text-3xl font-bold text-gray-400'>{data.draws}</p>
-            <p className='text-xs text-gray-400 uppercase tracking-wider'>
+            <p className='text-3xl font-bold text-gray-500'>{data.draws}</p>
+            <p className='text-xs text-gray-500 uppercase tracking-wider'>
               Draws
             </p>
           </div>
@@ -65,19 +64,19 @@ const Fighter = () => {
           ].map(({ label, value }) => (
             <div
               key={label}
-              className='bg-neutral-900 rounded-lg p-4 border border-neutral-800'
+              className='bg-gray-50 rounded-lg p-4 border border-gray-200'
             >
-              <p className='text-xs text-gray-400 uppercase tracking-wider mb-1'>
+              <p className='text-xs text-gray-500 uppercase tracking-wider mb-1'>
                 {label}
               </p>
-              <p className='text-white font-medium'>{value || '—'}</p>
+              <p className='text-gray-900 font-medium'>{value || '—'}</p>
             </div>
           ))}
         </div>
 
         {/* Physical stats */}
         <div>
-          <h2 className='text-white font-bold mb-3 uppercase tracking-wider text-sm'>
+          <h2 className='text-gray-900 font-bold mb-3 uppercase tracking-wider text-sm'>
             Physical Stats
           </h2>
           <div className='grid grid-cols-2 gap-4'>
@@ -89,12 +88,12 @@ const Fighter = () => {
             ].map(({ label, value }) => (
               <div
                 key={label}
-                className='bg-neutral-900 rounded-lg p-4 border border-neutral-800'
+                className='bg-gray-50 rounded-lg p-4 border border-gray-200'
               >
-                <p className='text-xs text-gray-400 uppercase tracking-wider mb-1'>
+                <p className='text-xs text-gray-500 uppercase tracking-wider mb-1'>
                   {label}
                 </p>
-                <p className='text-white font-medium'>{value || '—'}</p>
+                <p className='text-gray-900 font-medium'>{value || '—'}</p>
               </div>
             ))}
           </div>

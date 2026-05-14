@@ -6,11 +6,12 @@ import Fighters from '../pages/Fighters';
 import Rankings from '../pages/Ranking';
 import NavBar from '../components/NavBar';
 import Page404 from '../pages/Page404';
+import Layout from '../components/Layaout';
 const Router = () => {
   return (
     <BrowserRouter>
       <NavBar />
-      <main className='pt-16 min-h-screen max-w-7xl mx-auto px-4'>
+      <Layout>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/rankings' element={<Rankings />} />
@@ -19,7 +20,7 @@ const Router = () => {
           <Route path='/fighter/:fighterId' element={<Fighter />} />
           <Route path='*' element={<Page404 />} />
         </Routes>
-      </main>
+      </Layout>
     </BrowserRouter>
   );
 };
