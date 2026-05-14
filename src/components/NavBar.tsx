@@ -78,21 +78,7 @@ const NavBar = () => {
                 Rankings
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to='/division'
-                className={({ isActive }) =>
-                  `block py-2 px-3 rounded md:p-0 ${
-                    isActive
-                      ? 'text-white bg-brand md:bg-transparent md:text-fg-brand'
-                      : 'text-heading hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand'
-                  }`
-                }
-                onClick={() => setIsOpen(false)}
-              >
-                Divisions
-              </NavLink>
-            </li>
+
             <li>
               <NavLink
                 to='/fighters'
